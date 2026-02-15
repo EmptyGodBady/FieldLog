@@ -21,10 +21,17 @@
         "backgroundColor": "#ffffff"
       },
       "edgeToEdgeEnabled": true,
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "package": "com.vitaliikonovalenko.FieldLog"
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "a6de90d7-fee2-43a0-a604-0595f59e513f"
+      }
+    },
+    "owner": "vitaliikonovalenko"
   }
 }
