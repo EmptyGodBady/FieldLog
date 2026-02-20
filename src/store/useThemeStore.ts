@@ -5,8 +5,7 @@ type ThemeState = {
   toggle: () => void;
 };
 
-const useThemeStore = create<ThemeState>((set) => ({
+export const useThemeStore = create<ThemeState>((set) => ({
   isDark: false,
   toggle: () => set((state) => ({ isDark: !state.isDark })),
 }));
-  
