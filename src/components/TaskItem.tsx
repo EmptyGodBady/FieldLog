@@ -18,7 +18,7 @@ export const TaskItem = ({ title, onDelete }: Props) => {
       <TouchableOpacity
         style={{
           marginTop: 15,
-          borderRadius: 25,
+          borderRadius: 16,
           backgroundColor: theme.colors.danger,
           justifyContent: "center",
           alignItems: "center",
@@ -43,7 +43,7 @@ export const TaskItem = ({ title, onDelete }: Props) => {
       <TouchableOpacity
         style={{
           marginTop: 15,
-          borderRadius: 25,
+          borderRadius: 16,
           backgroundColor: theme.colors.primary,
           justifyContent: "center",
           alignItems: "center",
@@ -74,7 +74,7 @@ export const TaskItem = ({ title, onDelete }: Props) => {
           style={{
             borderColor: theme.colors.primary,
             borderWidth: 1,
-            borderRadius: 25,
+            borderRadius: 16,
             paddingHorizontal: 12,
             backgroundColor: theme.colors.background,
             height: 50,

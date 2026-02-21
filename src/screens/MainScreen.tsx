@@ -15,7 +15,7 @@ import { RootStackParamList } from "../types";
 type NavigationProp = NativeStackNavigationProp<RootStackParamList, "TheLake">;
 
 export default function MainScreen() {
-  const { theme, toggleTheme } = useTheme();
+  const { theme } = useTheme();
   const navigation = useNavigation<NavigationProp>();
   const userName = AsyncStorage.getItem("userName");
 
@@ -91,7 +91,7 @@ export default function MainScreen() {
             gap: 8,
             paddingHorizontal: 16,
           }}
-          onPress={() => navigation.navigate("TaskList")}
+          onPress={() => navigation.navigate("Calculator")}
         >
           <Text style={{ color: theme.colors.textPrimary, fontSize: 24 }}>
             Calculator

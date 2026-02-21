@@ -1,10 +1,5 @@
 export const timeToMinutes = (time: string) => {
-  if (!time || !time.includes(":")) return 0;
-
   const [hours, minutes] = time.split(":").map(Number);
-
-  if (isNaN(hours) || isNaN(minutes)) return 0;
-
   return hours * 60 + minutes;
 };
 

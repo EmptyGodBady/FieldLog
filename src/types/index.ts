@@ -18,6 +18,7 @@ export type RootStackParamList = {
   TheLake: undefined;
   Schedule: undefined;
   EditShift: { date: string };
+  Calculator: undefined;
 };
 export type Shift = {
   id: string;
@@ -28,6 +29,6 @@ export type Shift = {
 };
 export type TaskState = {
   tasks: Task[];
-  addTask: (title: string, description: string) => void;
+  addTask: (title: string) => void;
   removeTask: (id: string) => void;
 };

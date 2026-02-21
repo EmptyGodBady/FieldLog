@@ -33,7 +33,7 @@ export default function TaskListScreen() {
             paddingHorizontal: 12,
             width: "80%",
             borderWidth: 1,
-            borderRadius: 25,
+            borderRadius: 16,
             marginBottom: 16,
             borderColor: theme.colors.primary,
             fontSize: 32,

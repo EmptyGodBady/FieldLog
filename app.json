@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "FieldLog",
-    "slug": "FieldLog",
+    "slug": "fieldlog",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -13,7 +13,11 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.vitaliikonovalenko.FieldLog",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
     },
     "android": {
       "adaptiveIcon": {
@@ -32,6 +36,12 @@
         "projectId": "a6de90d7-fee2-43a0-a604-0595f59e513f"
       }
     },
-    "owner": "vitaliikonovalenko"
+    "owner": "vitaliikonovalenko",
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/a6de90d7-fee2-43a0-a604-0595f59e513f"
+    }
   }
 }

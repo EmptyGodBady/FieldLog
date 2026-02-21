@@ -9,6 +9,7 @@ import { useTheme } from "../theme/ThemeProvider";
 import ScheduleScreen from "../screens/ScheduleScreen";
 import { RootStackParamList } from "../types";
 import EditShiftScreen from "../screens/EditShiftScreen";
+import CalculatorScreen from "../screens/CalculatorScreen";
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
@@ -71,6 +72,11 @@ export default function AppNavigator() {
             presentation: "modal",
             headerShown: false,
           }}
+        />
+        <Stack.Screen
+          name="Calculator"
+          component={CalculatorScreen}
+          options={{ title: "Calculator" }}
         />
       </Stack.Navigator>
     </NavigationContainer>
