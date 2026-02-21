@@ -1,11 +1,12 @@
 import { ReactNode } from "react";
-import { TouchableOpacity, View } from "react-native";
+import { FlexAlignType, TouchableOpacity, View } from "react-native";
 import { useTheme } from "../theme/ThemeProvider";
 import { Moon, Sun } from "lucide-react-native";
 type Props = {
   children: ReactNode;
+  align?: FlexAlignType;
 };
-export default function BaseLayout({ children }: Props) {
+export default function BaseLayout({ children, align = "center" }: Props) {
   const { theme, toggleTheme, isDark } = useTheme();
 
   return (
@@ -14,7 +15,7 @@ export default function BaseLayout({ children }: Props) {
         backgroundColor: theme.colors.background,
         height: "100%",
         flex: 1,
-        alignItems: "center",
+        alignItems: align,
       }}
     >
       {children}

@@ -6,14 +6,9 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 import WelcomeScreen from "../screens/WelcomeScreen";
 import MainScreen from "../screens/MainScreen";
 import { useTheme } from "../theme/ThemeProvider";
-
-export type RootStackParamList = {
-  TaskList: undefined;
-  TaskDetails: { taskId: string };
-  EditTask: { taskId: string };
-  Froggie: undefined;
-  TheLake: undefined;
-};
+import ScheduleScreen from "../screens/ScheduleScreen";
+import { RootStackParamList } from "../types";
+import EditShiftScreen from "../screens/EditShiftScreen";
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
@@ -63,6 +58,19 @@ export default function AppNavigator() {
           name="TaskList"
           component={TaskListScreen}
           options={{ title: "Tasks" }}
+        />
+        <Stack.Screen
+          name="Schedule"
+          component={ScheduleScreen}
+          options={{ title: "Schedule" }}
+        />
+        <Stack.Screen
+          name="EditShift"
+          component={EditShiftScreen}
+          options={{
+            presentation: "modal",
+            headerShown: false,
+          }}
         />
       </Stack.Navigator>
     </NavigationContainer>

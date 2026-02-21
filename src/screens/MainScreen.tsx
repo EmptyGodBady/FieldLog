@@ -8,9 +8,9 @@ import {
 } from "lucide-react-native";
 import BaseLayout from "../components/BaseLayout";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
-import { RootStackParamList } from "../navigation/AppNavigator";
 import { useNavigation } from "@react-navigation/native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import { RootStackParamList } from "../types";
 
 type NavigationProp = NativeStackNavigationProp<RootStackParamList, "TheLake">;
 
@@ -72,7 +72,7 @@ export default function MainScreen() {
             gap: 8,
             paddingHorizontal: 16,
           }}
-          onPress={() => navigation.navigate("TaskList")}
+          onPress={() => navigation.navigate("Schedule")}
         >
           <Text style={{ color: theme.colors.textPrimary, fontSize: 24 }}>
             Schedule

@@ -1,10 +1,6 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
-
-type UserState = {
-  name: string | null;
-  setName: (name: string) => void;
-};
+import { UserState } from "../types";
 
 export const useUserStore = create<UserState>()(
   persist(

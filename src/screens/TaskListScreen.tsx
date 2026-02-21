@@ -1,20 +1,15 @@
 import React, { useState } from "react";
-import { View, Text, FlatList, TouchableOpacity, Button } from "react-native";
+import { View, FlatList, TouchableOpacity } from "react-native";
 import { useTaskStore } from "../store/useTaskStore";
-import { NativeStackScreenProps } from "@react-navigation/native-stack";
-import { RootStackParamList } from "../navigation/AppNavigator";
 import { TaskItem } from "../components/TaskItem";
 import { TextInput } from "react-native-gesture-handler";
 import BaseLayout from "../components/BaseLayout";
 import { useTheme } from "../theme/ThemeProvider";
 import { Pencil } from "lucide-react-native";
 
-type Props = NativeStackScreenProps<RootStackParamList, "TaskList">;
-
-export default function TaskListScreen({ navigation }: Props) {
+export default function TaskListScreen() {
   const [title, setTitle] = useState("");
-  const [description, setDescription] = useState("");
-  const { tasks, addTask, toggleTask, removeTask } = useTaskStore();
+  const { tasks, addTask, removeTask } = useTaskStore();
   const { theme } = useTheme();
 
   return (
@@ -59,9 +54,8 @@ export default function TaskListScreen({ navigation }: Props) {
           }}
           onPress={() => {
             if (!title.trim()) return;
-            addTask(title, description);
+            addTask(title);
             setTitle("");
-            setDescription("");
           }}
         >
           <Pencil color={theme.colors.textPrimary} />
